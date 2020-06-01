@@ -1,12 +1,12 @@
 CC:=arm-linux-gnueabihf-g++
 TARGET:=Run_demo
 SRC_DIR:=source
-OBJ_DIR:="build/object"
-OUT_DIR:="build/output"
+OBJ_DIR:=build/object
+OUT_DIR:=build/output
 SOURCES:=$(wildcard $(SRC_DIR)/*.cpp)
 INC_DIR:= \
 	-I./include \
-	-I./thirdparty/include \
+	-I./thirdparty/library/include \
 
 OBJECTS:=$(addprefix $(OBJ_DIR)/,$(patsubst %.cpp,%.o,$(notdir $(SOURCES))))
 
